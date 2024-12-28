@@ -1,0 +1,57 @@
+server:
+  port: 8001
+
+postgresql:
+  "tenant":
+    connection_string: ${pg_tenant_conn_str}
+    connection_timeout: 15s
+
+user:
+  password_salt: ${user_password_salt}
+  token_expiration: 168h
+  token_secret_key: ${token_secret_key}
+  client_id: test
+  http:
+    "LoginSocial":
+      timeout: 1s
+    "GetUserByID":
+      timeout: 1s
+    "UpdateUser":
+      timeout: 3s
+
+content:
+  http:
+    "CreateContent":
+      timeout: 3s
+    "GetContents":
+      timeout: 2s
+    "GetContentByID":
+      timeout: 1s
+    "UpdateContent":
+      timeout: 3s
+    "DeleteContentByID":
+      timeout: 3s
+
+template:
+  http:
+    "CreateTemplate":
+      timeout: 3s
+    "GetTemplates":
+      timeout: 2s
+    "GetTemplateByID":
+      timeout: 1s
+    "UpdateTemplate":
+      timeout: 3s
+    "DeleteTemplateByID":
+      timeout: 3s
+
+payment:
+  http:
+    "CreatePayment":
+      timeout: 3s
+    "GetPayments":
+      timeout: 2s
+    "GetPaymentByID":
+      timeout: 1s
+    "UpdatePayment":
+      timeout: 3s

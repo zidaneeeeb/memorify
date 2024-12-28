@@ -1,0 +1,6 @@
+# go vendor folder
+/vendor
+
+# binaries
+/tenant-api-grpc
+/tenant-api-http
